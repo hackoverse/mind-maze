@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Maze</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gameScreen">
+  <div id="lockContainer" class="hidden">
+    <button id="coordinatorBtn">🔒</button>
+  </div>
+  
+  <h1>HACKOVERSE</h1>
+  <h3 id="playerDisplay"></h3>
+  <div>Time Left: <span id="timer"></span></div>
+  <div>Solved: <span id="solvedCount">0/7</span></div>
+  
+  <pre id="codeProblem"></pre>
+  <textarea id="participantCode" placeholder="Type your solution here" spellcheck="false" autocorrect="off" autocapitalize="off"></textarea>
+  <button id="runBtn">Run</button>
+  
+  <div id="outputBox" class="hidden">
+    <h4>Output:</h4>
+    <pre id="outputDisplay"></pre>
+  </div>
+</div>
+
+<div id="endScreen" class="hidden">
+  <h1>HACKOVERSE</h1>
+  <h2 id="endMessage"></h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

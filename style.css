@@ -1,0 +1,307 @@
+/* * PRO UI HACKOVERSE STYLE - Final Fix for Output Lighting
+ * Colors: Deep Black (#0B0B0B), Electric Red (#FF3366), Neon Green/Code (#39FF14)
+*/
+
+/* ----------------------------------------------------
+ * KEYFRAMES - DYNAMIC EFFECTS
+ * ---------------------------------------------------- */
+@keyframes flicker {
+    0%, 100% { 
+        text-shadow: 0 0 5px rgba(255, 51, 102, 0.8), 0 0 10px rgba(255, 51, 102, 0.4);
+        opacity: 1;
+    }
+    50% { 
+        text-shadow: 0 0 15px #FF3366, 0 0 30px rgba(255, 51, 102, 0.6); 
+        opacity: 0.95;
+    }
+}
+
+/* More Attractive Background Scan: Faster, more visible, but still subtle */
+@keyframes background-scan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 200%; }
+}
+
+/* Quick animation for INCORRECT output */
+@keyframes error-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 51, 102, 0.8); }
+    50% { transform: scale(1.005); box-shadow: 0 0 25px #FF3366; }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 51, 102, 0.8); }
+}
+
+/* ----------------------------------------------------
+ * BASE & BACKGROUND - Enhanced Animation
+ * ---------------------------------------------------- */
+body {
+    font-family: 'Roboto Mono', 'Consolas', 'Courier New', monospace;
+    background: #0B0B0B;
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+    flex-direction: column;
+    overflow-x: hidden;
+    
+    /* Dynamic Background: Scanning lines over a deep core */
+    background-image: 
+        linear-gradient(45deg, rgba(255, 51, 102, 0.1) 1%, transparent 1%),
+        linear-gradient(-45deg, rgba(255, 51, 102, 0.1) 1%, transparent 1%),
+        radial-gradient(circle at 50% 50%, #0B0B0B 60%, #1A050A 100%);
+    background-size: 200px 200px, 200px 200px, 100% 100%;
+    animation: background-scan 30s linear infinite;
+    transition: all 0.5s ease;
+}
+
+/* ----------------------------------------------------
+ * CONTAINERS & SCREENS
+ * ---------------------------------------------------- */
+#gameScreen, #regScreen, #endScreen {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(10, 10, 10, 0.98);
+    border: 2px solid #FF3366;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.6);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ----------------------------------------------------
+ * TYPOGRAPHY
+ * ---------------------------------------------------- */
+h1 {
+    font-size: 3rem;
+    color: #FF3366;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+    animation: flicker 1.5s infinite alternate;
+    text-transform: uppercase;
+}
+
+#timer {
+    color: #FF3366;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* ----------------------------------------------------
+ * CODE & INPUT AREAS
+ * ---------------------------------------------------- */
+/* Code Problem Display */
+pre#codeProblem {
+    text-align: left;
+    background: #151515;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    overflow-x: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+    color: #EAEAEA;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* HIGHLIGHT: Programming Language Name */
+pre#codeProblem strong {
+    color: #FF3366;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.7);
+}
+
+/* Participant Input Area */
+textarea#participantCode {
+    width: calc(100% - 30px);
+    height: 300px; 
+    margin: 20px auto;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 1rem;
+    background: #000000;
+    color: #39FF14;
+    border: 2px solid #FF3366; 
+    border-radius: 8px;
+    resize: vertical;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+textarea#participantCode:focus {
+    border-color: #39FF14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.7);
+    outline: none;
+    background: #050505;
+}
+
+/* ----------------------------------------------------
+ * OUTPUT BOX (Conditional Styling)
+ * ---------------------------------------------------- */
+#outputBox {
+    margin-top: 20px;
+    background: #1A1A1A;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #444;
+    text-align: left;
+    transition: all 0.3s ease-in-out; 
+}
+
+#outputBox h4 {
+    color: #FF3366;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+}
+
+/* Base style for the output text area */
+#outputDisplay {
+    background: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    color: #EAEAEA;
+    white-space: pre-wrap;
+    word-break: break-word;
+    /* Reset text shadow/color for transition */
+    text-shadow: none; 
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 🟢 Style for CORRECT output (Riddle in Green with Lighting) 🟢 */
+#outputBox.correct {
+    border-left-color: #39FF14; 
+    /* STRONG LIGHTING EFFECT */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.6), inset 0 0 5px rgba(57, 255, 20, 0.3);
+}
+
+/* FIX: Ensure the color and shadow are applied directly to the text */
+#outputBox.correct #outputDisplay {
+    color: #39FF14; /* Neon Green Text */
+    font-weight: bold;
+    /* Increased text lighting for correct output (Riddle) */
+    text-shadow: 0 0 10px #39FF14, 0 0 20px rgba(57, 255, 20, 0.5); 
+}
+
+/* 🔴 Style for INCORRECT output (Error in Red with Lighting and Animation) 🔴 */
+#outputBox.incorrect {
+    border-left-color: #FF3366;
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.8), inset 0 0 5px rgba(255, 51, 102, 0.4);
+    /* DYNAMIC PULSE EFFECT */
+    animation: error-pulse 0.2s ease-in-out 3; 
+}
+
+/* FIX: Ensure the color and shadow are applied directly to the text */
+#outputBox.incorrect #outputDisplay {
+    color: #FF3366; /* Electric Red Text */
+    font-weight: bold;
+    /* Increased text lighting for incorrect output */
+    text-shadow: 0 0 10px #FF3366, 0 0 20px rgba(255, 51, 102, 0.7);
+}
+
+
+/* ----------------------------------------------------
+ * REST OF STYLES (Buttons, Responsive, etc.)
+ * ---------------------------------------------------- */
+
+button, #runBtn, #startBtn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    background: #FF3366;
+    color: #0B0B0B;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover, #runBtn:hover, #startBtn:hover {
+    background: #0B0B0B;
+    color: #FF3366;
+    border: 2px solid #FF3366;
+    box-shadow: 0 0 30px #FF3366;
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    padding: 15px;
+    font-size: 1.1rem;
+    background: #111111;
+    color: #EAEAEA;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#lockContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#coordinatorBtn {
+    padding: 0;
+    font-size: 24px; 
+    background: #1A1A1A;
+    color: #FF3366;
+    border: 2px solid #FF3366;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+#coordinatorBtn:hover {
+    background: #FF3366;
+    color: #0B0B0B;
+    border-color: #FF3366;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* RESPONSIVENESS (Mobile Optimization) */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    #gameScreen, #regScreen, #endScreen {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    textarea#participantCode {
+        height: 200px; 
+        font-size: 0.9rem;
+    }
+    button, #runBtn, #startBtn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    #lockContainer {
+        top: 10px;
+        right: 10px;
+    }
+    #coordinatorBtn {
+        width: 40px; 
+        height: 40px; 
+        font-size: 20px;
+    }
+}
+
+.hidden {
+    display: none;
+}
