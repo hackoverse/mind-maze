@@ -34,17 +34,17 @@ gameScreen.classList.remove("hidden");
 const stages = [
   {language:"C Program",
    code:`#include<stdio.h>
- #include <string.h>
+ inculde <string.l>
   return 0;
 int main( {
     char s1[40];
     char s2[20]="point";
-    strcpy(s1, east");
+    strcpy(s1, east);
     strcat(s1, s2);
-    printf("%s", s1)
+    printf("%s", &s1)
     
 }
-// 🔍 Hint: “Functions need parentheses. Remember to use quotes around string literals in strcpy, and 'strcat' requires two string arguments to connect.”`,
+// 🔍 Hint: “Functions need parenthesis. Remember to use quotes around string literals in strcpy, and 'strcat' requires two string arguments to connect.”`,
    solvedCode:`#include<stdio.h>
 #include<string.h>
 int main() {
@@ -60,7 +60,7 @@ int main() {
   },
   {language:"Python Program",
    code:`words = [Good", "bad"]
-for w words:
+for w word;
     pass
 print("".join(words)
 # 🔍 Hint: “Lists require quotes around all string items. Loops need the 'in' keyword, a colon, and print statements must be closed.”`,
@@ -73,11 +73,11 @@ print("".join(words))`,
   },
   {language:"C Program",
    code:`include <stdioh>
-#int main() {
+#int main() 
     return 0;
     char clue1[] = "home";
-    printf("%s where things %s", clue2, clue1);
-    char clue2[] = "town";
+    printf("%d where things %s", clue2, clue1);
+    char clue2[] = "town":
 }
 // 🔍 Hint: “The pound sign (#) is vital for includes and should not prefix the main function. Variables must be declared before they are used.”`,
    solvedCode:`#include <stdio.h>
@@ -87,24 +87,24 @@ int main() {
     printf("%s where things %s", clue2, clue1);
     return 0;
 }`,
-   riddle:"Where clothes come out fresh and clean.",
+   riddle:"Thunder hums in circle behind closed walls.",
    coordinatorPassword:"123"
   },
   {language:"Python Program",
    code:`for i n  range(1);
-    place = sleep"
+    place = sleep";
 print("we", "dream", "at", place);
 # 🔍 Hint: “The loop needs the 'in' keyword and a colon, not a semicolon. Strings, even variables, need both open and close quotes.”`,
    solvedCode:`for i in range(1):
     place = "sleep"
 print("we", "dream", "at", place)`,
-   riddle:"where student rest after a long day.",
+   riddle:"I'm home to many, yet owned by none.",
    coordinatorPassword:"123"
   },
   {language:"C Program",
    code:`#include <stdioh>
-int main {
-printf("odd");
+int mian {
+print("odd");
     for (int i = "0"; i < 4; i++) {
         if (i == 2){
             printf("even"):
@@ -125,13 +125,13 @@ int main() {
     }
     return 0;
 }`,
-   riddle:"where players run, shout, and play games.",
+   riddle:"Many run over me, yet i never move an inch.",
    coordinatorPassword:"123"
   },
   {language:"Python Program",
    code:`block = "meet"
-if block == meet":
-    print("The block of learning);
+if block == meet";
+    printf("The block of learning);
 else:
     print("Unknown zone")
 # 🔍 Hint: “Be sure that every string, whether in a conditional check or a print function, is fully enclosed by quotation marks.”`,
@@ -140,14 +140,14 @@ if block == "meet":
     print("The block of learning")
 else:
     print("Unknown zone")`,
-   riddle:"Where classes, laugther, and learning meet.",
+   riddle:"A place where actual learning begins.",
    coordinatorPassword:"123"
   },
   {language:"C Program",
    code:`#includ <stdio.h>
 int main() {
-    char place[] = "Ground":
-    printf("where cricket is played: %s", place)
+    char place() = "Ground":
+    print("where cricket is played: %s", place)
     return 0
 }
 // 🔍 Hint: “The '#include' keyword is misspelled. Remember that in C, variables, print statements, and return statements all need to be terminated by a semicolon.”`,
@@ -157,7 +157,7 @@ int main() {
     printf("where cricket is played: %s", place);
     return 0;
 }`,
-   riddle:"Where food gives energy for the next challenge.",
+   riddle:"No counter,no crowd-only the clang of vessels and silence effort.",
    coordinatorPassword:"123"
   }
 ];
@@ -310,4 +310,5 @@ function endGame(win) {
 // START FIRST STAGE
 // ==========================
 showStage();
+
 startTimer();
