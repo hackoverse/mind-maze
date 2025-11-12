@@ -56,7 +56,7 @@ int main() {
     return 0;
 }`,
    riddle:"Not every entrance is in the front.",
-   coordinatorPassword:"david"
+   coordinatorPassword:"hctc@1997"
   },
   {language:"Python Program",
    code:`words = [Good", "bad"]
@@ -69,7 +69,7 @@ for w in words:
     pass
 print("".join(words))`,
    riddle:"Where greetings begin and journeys start.",
-   coordinatorPassword:"mohan"
+   coordinatorPassword:"hctc@1997"
   },
   {language:"C Program",
    code:`include <stdioh>
@@ -88,7 +88,7 @@ int main() {
     return 0;
 }`,
    riddle:"Thunder hums in circle behind closed walls.",
-   coordinatorPassword:"rahul"
+   coordinatorPassword:"hctc@1997"
   },
   {language:"Python Program",
    code:`for i n  range(1);
@@ -98,8 +98,8 @@ print("we", "dream", "at", place);
    solvedCode:`for i in range(1):
     place = "sleep"
 print("we", "dream", "at", place)`,
-   riddle:"Pain is my fee, gain is my prize",
-   coordinatorPassword:"dhanya"
+   riddle:"I'm full of weigths but not a measure, Pain first, Results are strong.",
+   coordinatorPassword:"hctc@1997"
   },
   {language:"C Program",
    code:`#include <stdioh>
@@ -126,7 +126,7 @@ int main() {
     return 0;
 }`,
    riddle:"Many run over me, yet i never move an inch.",
-   coordinatorPassword:"ganesh"
+   coordinatorPassword:"hctc@1997"
   },
   {language:"Python Program",
    code:`block = "meet"
@@ -140,8 +140,8 @@ if block == "meet":
     print("The block of learning")
 else:
     print("Unknown zone")`,
-   riddle:"A place where actual learning begins.",
-   coordinatorPassword:"guna"
+   riddle:"A place where actual learning begins in the campus.",
+   coordinatorPassword:"hctc@1997"
   },
   {language:"C Program",
    code:`#includ <stdio.h>
@@ -158,7 +158,7 @@ int main() {
     return 0;
 }`,
    riddle:"No counter,no crowd-only the clang of vessels and silence effort.",
-   coordinatorPassword:"malini"
+   coordinatorPassword:"hctc@1997"
   }
 ];
 
@@ -312,4 +312,5 @@ function endGame(win) {
 showStage();
 
 startTimer();
+
 
