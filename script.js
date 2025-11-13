@@ -56,7 +56,7 @@ int main() {
     return 0;
 }`,
    riddle:"Not every entrance is in the front.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"Python Program",
    code:`words = [Good", "bad"]
@@ -69,7 +69,7 @@ for w in words:
     pass
 print("".join(words))`,
    riddle:"Where greetings begin and journeys start.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"C Program",
    code:`include <stdioh>
@@ -88,7 +88,7 @@ int main() {
     return 0;
 }`,
    riddle:"Thunder hums in circle behind closed walls.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"Python Program",
    code:`for i n  range(1);
@@ -99,7 +99,7 @@ print("we", "dream", "at", place);
     place = "sleep"
 print("we", "dream", "at", place)`,
    riddle:"I'm full of weigths but not a measure, Pain first, Results are strong.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"C Program",
    code:`#include <stdioh>
@@ -126,7 +126,7 @@ int main() {
     return 0;
 }`,
    riddle:"Many run over me, yet i never move an inch.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"Python Program",
    code:`block = "meet"
@@ -141,7 +141,7 @@ if block == "meet":
 else:
     print("Unknown zone")`,
    riddle:"A place where actual learning begins in the campus.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   },
   {language:"C Program",
    code:`#includ <stdio.h>
@@ -158,7 +158,7 @@ int main() {
     return 0;
 }`,
    riddle:"No counter,no crowd-only the clang of vessels and silence effort.",
-   coordinatorPassword:"hctc@1997"
+   coordinatorPassword:"mm2k25"
   }
 ];
 
@@ -312,5 +312,6 @@ function endGame(win) {
 showStage();
 
 startTimer();
+
 
 
