@@ -87,7 +87,7 @@ int main() {
     printf("%s where things %s", clue2, clue1);
     return 0;
 }`,
-   riddle:"Thunder hums in circle behind closed walls.",
+   riddle:"Where cloth meets storm and leave reborn.",
    coordinatorPassword:"mm2k25"
   },
   {language:"Python Program",
@@ -140,7 +140,7 @@ if block == "meet":
     print("The block of learning")
 else:
     print("Unknown zone")`,
-   riddle:"A place where actual learning begins in the campus.",
+   riddle:"A block where actual learning begins in the campus.",
    coordinatorPassword:"mm2k25"
   },
   {language:"C Program",
@@ -312,6 +312,7 @@ function endGame(win) {
 showStage();
 
 startTimer();
+
 
 
 
