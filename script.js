@@ -157,7 +157,7 @@ int main() {
     printf("where cricket is played: %s", place);
     return 0;
 }`,
-   riddle:"No counter,no crowd-only the clang of vessels and silence effort.",
+   riddle:"I'm small but always buzzing.",
    coordinatorPassword:"mm2k25"
   }
 ];
@@ -312,6 +312,7 @@ function endGame(win) {
 showStage();
 
 startTimer();
+
 
 
 
