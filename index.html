@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Mark List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily News</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h2>Student Mark List</h2>
+  <header>
+    <h1>Daily News</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">World</a>
+      <a href="#">Politics</a>
+      <a href="#">Sports</a>
+      <a href="#">Tech</a>
+    </nav>
+  </header>
 
-        <div class="form-box">
-            <input type="text" id="name" placeholder="Student Name">
-            <input type="number" id="math" placeholder="Math Marks">
-            <input type="number" id="science" placeholder="Science Marks">
-            <input type="number" id="english" placeholder="English Marks">
-            <button onclick="addStudent()">Add Student</button>
-        </div>
+  <section class="hero">
+    <h2>Breaking News: Stay Updated Every Moment</h2>
+  </section>
 
-        <table id="studentTable">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Math</th>
-                    <th>Science</th>
-                    <th>English</th>
-                    <th>Total</th>
-                    <th>Percentage</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
+  <section class="news-section" id="news-container"></section>
 
-<script src="script.js"></script>
+  <footer>
+    © 2025 Daily News — All Rights Reserved
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
